@@ -38,4 +38,4 @@ El archivo `index.html` incluye las siguientes secciones:
 ## Autor
 
 - **Estudiante:** Luis Enrique Valey Osorio (9490-21-16222)
-- **Proyecto:** Hoja de Trabajo - Página Web con HTML
+- **Proyecto:** Hoja de Trabajo 1 - Página Web con HTML
