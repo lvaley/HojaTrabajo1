@@ -33,7 +33,7 @@ El archivo `index.html` incluye las siguientes secciones:
 
 ## Cómo visualizar la página
 
-1. Abrir el enlace desplegado en Neftily: `https://neon-pastelito-6189df.netlify.app/`.
+1. Abrir el enlace desplegado en Netlify: `https://neon-pastelito-6189df.netlify.app/`.
 
 ## Autor
 
