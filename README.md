@@ -33,9 +33,9 @@ El archivo `index.html` incluye las siguientes secciones:
 
 ## Cómo visualizar la página
 
-1. Abrir el enlace desplegado en Netlify: `https://hokkaido-itinerary.netlify.app/`.
+1. Abrir el enlace desplegado en Netlify: `https://hokkaido-itinerary-v1.netlify.app/`.
 
 ## Autor
 
 - **Estudiante:** Luis Enrique Valey Osorio (9490-21-16222)
-- **Proyecto:** Hoja de Trabajo 1 - Página Web con HTML
+- **Proyecto:** Hoja de Trabajo 1 - Página Web con HTML y CSS
