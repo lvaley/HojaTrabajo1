@@ -371,6 +371,15 @@ ul.features li {
     background: var(--ice);
 }
 
+#mg1:checked ~ .gallery-dots label[for="mg1"],
+#mg2:checked ~ .gallery-dots label[for="mg2"],
+#mg3:checked ~ .gallery-dots label[for="mg3"],
+#mg4:checked ~ .gallery-dots label[for="mg4"],
+#mg5:checked ~ .gallery-dots label[for="mg5"],
+#mg6:checked ~ .gallery-dots label[for="mg6"] {
+    background: var(--ice);
+}
+
 /* Por defecto: mostrar la versión de escritorio (paginada), ocultar la de móvil */
 .gallery-mobile {
     display: none;
