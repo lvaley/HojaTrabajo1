@@ -2,8 +2,8 @@
 
 ## Descripción
 
-Página web desarrollada en **HTML5 + CSS3 + JavaScript** cuyo
-objetivo es promocionar una excursión turística a **Hokkaido, Japón**.
+Página web desarrollada en **HTML5 + CSS3 cuyo objetivo es promocionar una excursión 
+turística a **Hokkaido, Japón**.
 
 ## Contenido de la página
 
