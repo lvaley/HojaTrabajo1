@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Página web desarrollada en **HTML** (sin CSS ni JavaScript) cuyo
+Página web desarrollada en **HTML5 + CSS3 + JavaScript** cuyo
 objetivo es promocionar una excursión turística a **Hokkaido, Japón**.
 
 ## Contenido de la página
