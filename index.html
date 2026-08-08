@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/japan-icon-v1.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@500;700&family=Noto+Sans:wght@400;600&family=IBM+Plex+Mono:wght@400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Hokkaido | Tour de 5 Días por el Norte de Japón</title>
+    <meta name="description"
+        content="Descubre Hokkaido en un recorrido guiado de 5 días. Explora paisajes nevados, aguas termales (onsen), naturaleza, gastronomía y la tradición del norte de Japón.">
+    <meta name="keywords"
+        content="Hokkaido, Japón, tour Hokkaido, viaje a Japón, norte de Japón, excursión Hokkaido, onsen, nieve, naturaleza, turismo Japón, vacaciones Japón, guía turística, cultura japonesa">
+</head>
+
+<body id="top">
+    <header>
+        <div class="nav-inner">
+            <h1>Hokkaido &#10052;&#65039;</h1>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <button type="button" class="search-toggle" id="search-toggle-btn" aria-label="Buscar actividades">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <circle cx="11" cy="11" r="7"></circle>
+                    <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                </svg>
+            </button>
+            <label for="nav-toggle" class="hamburger" aria-label="Abrir menú de navegación">
+                <span></span><span></span><span></span>
+            </label>
+            <nav>
+                <ul>
+                    <li><a href="#descripcion">Descripción</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#itinerario">Itinerario</a></li>
+                    <li><a href="#actividades">Actividades</a></li>
+                    <li><a href="#testimonios">Testimonios</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ===================== BARRA DE BÚSQUEDA ===================== -->
+    <div class="activity-search-bar" id="activity-search-bar">
+        <svg class="search-icon-small" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+        <input type="text" id="activity-search-input" placeholder="Buscar actividad (ej. esquí, onsen, gastronomía)...">
+        <button type="button" id="activity-search-close" aria-label="Cerrar búsqueda">&times;</button>
+    </div>
+
+    <!-- ===================== HERO ===================== -->
+    <div class="hero">
+        <div class="hero-content">
+            <p class="eyebrow">Japón · Isla de Hokkaido</p>
+            <h2>Nieve, naturaleza y tradición al norte de Japón</h2>
+            <button type="button" class="cta-quote" id="open-quote-btn">Cotizar excursión</button>
+        </div>
+    </div>
+
+    <!-- ===================== DESCRIPCIÓN ===================== -->
+    <main>
+        <section id="descripcion">
+            <h2>Descripción del lugar</h2>
+            <p>
+                Hokkaido es la isla más septentrional de Japón, reconocida por sus paisajes naturales
+                espectaculares, sus montañas volcánicas, sus campos de lavanda, sus aguas termales
+                (onsen) y sus inviernos nevados que la convierten en uno de los destinos turísticos
+                más atractivos del país. Su capital, Sapporo, es famosa mundialmente por el
+                Festival de la Nieve que se celebra cada mes de febrero.
+            </p>
+            <p>
+                <strong>Ubicación:</strong>
+                <a class="maps-link" href="https://www.google.com/maps/place/Hokkaido,+Jap%C3%B3n" target="_blank">
+                    Ver ubicación de Hokkaido en Google Maps
+                </a>
+            </p>
+            <p>
+                <strong>Características principales:</strong>
+            </p>
+            <ul class="features">
+                <li>Paisajes naturales únicos: lagos volcánicos, montañas y bosques.</li>
+                <li>Gastronomía reconocida internacionalmente (mariscos, ramen, lácteos).</li>
+                <li>Aguas termales naturales (onsen) para relajación.</li>
+                <li>Festivales de nieve y actividades de invierno de talla mundial.</li>
+                <li>Campos de lavanda y flores en la región de Furano durante el verano.</li>
+            </ul>
+            <p>
+                <strong>Atractivos destacados:</strong> Estanque Azul de Shirogane, Canal de Otaru,
+                Parque Nacional de Shiretoko (Patrimonio de la Humanidad UNESCO), Parque Odori en
+                Sapporo y la vista nocturna desde el Monte Hakodate.
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- ===================== GALERÍA ===================== -->
+        <section id="galeria">
+            <h2>Galería de imágenes</h2>
+            <div class="gallery-carousel">
+                <input type="radio" name="gpage" id="p1" class="gallery-radio" checked>
+                <input type="radio" name="gpage" id="p2" class="gallery-radio">
+
+                <div class="gallery-desktop">
+                    <div class="gallery-track">
+                        <div class="gallery-page page-1">
+                            <label for="p2" class="g-arrow prev" aria-label="Página anterior">‹</label>
+                            <div class="gallery-grid">
+                                <figure class="gallery-card">
+                                    <img src="img/estanque-azul-biei.jpg" alt="Estanque Azul de Shirogane, Biei">
+                                    <figcaption>
+                                        <p class="eyebrow-small">Explora</p>
+                                        <h3>Estanque Azul, Biei</h3>
+                                        <p>Aguas de un azul intenso rodeadas de troncos sumergidos, uno de los rincones
+                                            más fotografiados de Hokkaido.</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="gallery-card">
+                                    <img src="img/canal-de-otaru.jpg" alt="Canal de Otaru">
+                                    <figcaption>
+                                        <p class="eyebrow-small">Explora</p>
+                                        <h3>Canal de Otaru</h3>
+                                        <p>Un canal histórico bordeado de faroles de gas y antiguos almacenes de piedra
+                                            junto al mar.</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="gallery-card">
+                                    <img src="img/campos-de-lavanda-furano.jpg" alt="Campos de lavanda en Furano">
+                                    <figcaption>
+                                        <p class="eyebrow-small">Explora</p>
+                                        <h3>Campos de lavanda, Furano</h3>
+                                        <p>Colinas teñidas de morado durante el verano, uno de los paisajes florales más
+                                            icónicos de Japón.</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <label for="p2" class="g-arrow next" aria-label="Página siguiente">›</label>
+                        </div>
+
+                        <div class="gallery-page page-2">
+                            <label for="p1" class="g-arrow prev" aria-label="Página anterior">‹</label>
+                            <div class="gallery-grid">
+                                <figure class="gallery-card">
+                                    <img src="img/parque-odori-sapporo.jpg" alt="Parque Odori, Sapporo">
+                                    <figcaption>
+                                        <p class="eyebrow-small">Explora</p>
+                                        <h3>Parque Odori, Sapporo</h3>
+                                        <p>El corazón verde de la capital, sede del famoso Festival de la Nieve cada
+                                            febrero.</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="gallery-card">
+                                    <img src="img/vista-desde-el-monte-hakadate.jpg"
+                                        alt="Vista nocturna desde el Monte Hakodate">
+                                    <figcaption>
+                                        <p class="eyebrow-small">Explora</p>
+                                        <h3>Monte Hakodate</h3>
+                                        <p>Una de las tres mejores vistas nocturnas de Japón, con la ciudad extendida
+                                            entre dos bahías.</p>
+                                    </figcaption>
+                                </figure>
+                                <figure class="gallery-card">
+                                    <img src="img/parque-nacional-de-shiretoko.jpg" alt="Parque Nacional de Shiretoko">
+                                    <figcaption>
+                                        <p class="eyebrow-small">Explora</p>
+                                        <h3>Parque Nacional de Shiretoko</h3>
+                                        <p>Naturaleza virgen declarada Patrimonio de la Humanidad, hogar de zorros y
+                                            águilas marinas.</p>
+                                    </figcaption>
+                                </figure>
+                            </div>
+                            <label for="p1" class="g-arrow next" aria-label="Página siguiente">›</label>
+                        </div>
+                    </div>
+
+                    <div class="gallery-dots">
+                        <label for="p1"></label>
+                        <label for="p2"></label>
+                    </div>
+                </div>
+
+                <!-- ===== Versión móvil: carrusel de 1 imagen a la vez con descripción ===== -->
+                <div class="gallery-mobile">
+                    <input type="radio" name="gslide-mobile" id="mg1" class="gallery-radio" checked>
+                    <input type="radio" name="gslide-mobile" id="mg2" class="gallery-radio">
+                    <input type="radio" name="gslide-mobile" id="mg3" class="gallery-radio">
+                    <input type="radio" name="gslide-mobile" id="mg4" class="gallery-radio">
+                    <input type="radio" name="gslide-mobile" id="mg5" class="gallery-radio">
+                    <input type="radio" name="gslide-mobile" id="mg6" class="gallery-radio">
+
+                    <div class="gallery-track">
+                        <div class="m-slide mslide-1 gallery-card">
+                            <div class="m-image-wrap">
+                                <label for="mg6" class="g-arrow prev" aria-label="Imagen anterior">‹</label>
+                                <img src="img/estanque-azul-biei.jpg" alt="Estanque Azul de Shirogane, Biei">
+                                <label for="mg2" class="g-arrow next" aria-label="Siguiente imagen">›</label>
+                            </div>
+                            <div class="m-info">
+                                <p class="eyebrow-small">Explora</p>
+                                <h3>Estanque Azul, Biei</h3>
+                                <p>Aguas de un azul intenso rodeadas de troncos sumergidos, uno de los rincones más
+                                    fotografiados de Hokkaido.</p>
+                            </div>
+                        </div>
+                        <div class="m-slide mslide-2 gallery-card">
+                            <div class="m-image-wrap">
+                                <label for="mg1" class="g-arrow prev" aria-label="Imagen anterior">‹</label>
+                                <img src="img/canal-de-otaru.jpg" alt="Canal de Otaru">
+                                <label for="mg3" class="g-arrow next" aria-label="Siguiente imagen">›</label>
+                            </div>
+                            <div class="m-info">
+                                <p class="eyebrow-small">Explora</p>
+                                <h3>Canal de Otaru</h3>
+                                <p>Un canal histórico bordeado de faroles de gas y antiguos almacenes de piedra junto al
+                                    mar.</p>
+                            </div>
+                        </div>
+                        <div class="m-slide mslide-3 gallery-card">
+                            <div class="m-image-wrap">
+                                <label for="mg2" class="g-arrow prev" aria-label="Imagen anterior">‹</label>
+                                <img src="img/campos-de-lavanda-furano.jpg" alt="Campos de lavanda en Furano">
+                                <label for="mg4" class="g-arrow next" aria-label="Siguiente imagen">›</label>
+                            </div>
+                            <div class="m-info">
+                                <p class="eyebrow-small">Explora</p>
+                                <h3>Campos de lavanda, Furano</h3>
+                                <p>Colinas teñidas de morado durante el verano, uno de los paisajes florales más
+                                    icónicos de Japón.</p>
+                            </div>
+                        </div>
+                        <div class="m-slide mslide-4 gallery-card">
+                            <div class="m-image-wrap">
+                                <label for="mg3" class="g-arrow prev" aria-label="Imagen anterior">‹</label>
+                                <img src="img/parque-odori-sapporo.jpg" alt="Parque Odori, Sapporo">
+                                <label for="mg5" class="g-arrow next" aria-label="Siguiente imagen">›</label>
+                            </div>
+                            <div class="m-info">
+                                <p class="eyebrow-small">Explora</p>
+                                <h3>Parque Odori, Sapporo</h3>
+                                <p>El corazón verde de la capital, sede del famoso Festival de la Nieve cada febrero.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="m-slide mslide-5 gallery-card">
+                            <div class="m-image-wrap">
+                                <label for="mg4" class="g-arrow prev" aria-label="Imagen anterior">‹</label>
+                                <img src="img/vista-desde-el-monte-hakadate.jpg"
+                                    alt="Vista nocturna desde el Monte Hakodate">
+                                <label for="mg6" class="g-arrow next" aria-label="Siguiente imagen">›</label>
+                            </div>
+                            <div class="m-info">
+                                <p class="eyebrow-small">Explora</p>
+                                <h3>Monte Hakodate</h3>
+                                <p>Una de las tres mejores vistas nocturnas de Japón, con la ciudad extendida entre dos
+                                    bahías.</p>
+                            </div>
+                        </div>
+                        <div class="m-slide mslide-6 gallery-card">
+                            <div class="m-image-wrap">
+                                <label for="mg5" class="g-arrow prev" aria-label="Imagen anterior">‹</label>
+                                <img src="img/parque-nacional-de-shiretoko.jpg" alt="Parque Nacional de Shiretoko">
+                                <label for="mg1" class="g-arrow next" aria-label="Siguiente imagen">›</label>
+                            </div>
+                            <div class="m-info">
+                                <p class="eyebrow-small">Explora</p>
+                                <h3>Parque Nacional de Shiretoko</h3>
+                                <p>Naturaleza virgen declarada Patrimonio de la Humanidad, hogar de zorros y águilas
+                                    marinas.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="gallery-dots">
+                        <label for="mg1"></label>
+                        <label for="mg2"></label>
+                        <label for="mg3"></label>
+                        <label for="mg4"></label>
+                        <label for="mg5"></label>
+                        <label for="mg6"></label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ===================== ITINERARIO ===================== -->
+        <section id="itinerario">
+            <h2>Tabla de itinerarios</h2>
+            <div class="itinerary">
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 1 · 10/08/2026</span><span class="time">09:00 - 12:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Llegada y recorrido por el parque central</div>
+                        <div class="place">Parque Odori, Sapporo</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 1 · 10/08/2026</span><span class="time">14:00 - 18:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Visita a la Torre de Sapporo y mercado local</div>
+                        <div class="place">Torre de TV de Sapporo</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 2 · 11/08/2026</span><span class="time">08:30 - 12:30</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Paseo por el histórico canal y museos</div>
+                        <div class="place">Canal de Otaru</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 2 · 11/08/2026</span><span class="time">13:30 - 17:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Degustación de mariscos y talleres de vidrio</div>
+                        <div class="place">Centro de Otaru</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 3 · 12/08/2026</span><span class="time">07:00 - 13:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Excursión a los campos de lavanda</div>
+                        <div class="place">Furano y Biei</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 3 · 12/08/2026</span><span class="time">14:00 - 16:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Visita al Estanque Azul</div>
+                        <div class="place">Shirogane, Biei</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 4 · 13/08/2026</span><span class="time">08:00 - 17:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Caminata guiada y observación de fauna</div>
+                        <div class="place">Parque Nacional de Shiretoko</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 5 · 14/08/2026</span><span class="time">09:00 - 12:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Visita al Monte Hakodate y vista panorámica</div>
+                        <div class="place">Monte Hakodate</div>
+                    </div>
+                </div>
+                <div class="ticket">
+                    <div class="stub"><span class="day">Día 5 · 14/08/2026</span><span class="time">13:00 - 16:00</span>
+                    </div>
+                    <div class="body">
+                        <div class="activity">Compras finales y traslado de regreso</div>
+                        <div class="place">Aeropuerto de Hakodate</div>
+                    </div>
+                </div>
+            </div>
+            <p class="legal-note">
+                <em>Aviso legal: el itinerario presentado es de carácter referencial y puede
+                    sufrir modificaciones sin previo aviso debido a condiciones climáticas,
+                    disponibilidad de transporte o causas de fuerza mayor. Los horarios son
+                    aproximados. Se recomienda a los participantes contratar un seguro de viaje.
+                    La organización no se hace responsable por pérdidas, daños o accidentes
+                    derivados de actividades realizadas por cuenta propia fuera del itinerario
+                    oficial. Precios, fechas y actividades sujetos a disponibilidad; aplican
+                    términos y condiciones.</em>
+            </p>
+        </section>
+
+        <hr>
+
+        <!-- ===================== ACTIVIDADES ===================== -->
+        <section id="actividades">
+            <h2>Actividades adicionales</h2>
+            <div class="activities-carousel" id="activities-carousel">
+                <p class="no-results-msg" id="no-results-msg">No se encontraron actividades que coincidan con tu
+                    búsqueda.</p>
+                <input type="radio" name="activity" id="act1" class="activity-radio" checked>
+                <input type="radio" name="activity" id="act2" class="activity-radio">
+                <input type="radio" name="activity" id="act3" class="activity-radio">
+                <input type="radio" name="activity" id="act4" class="activity-radio">
+                <input type="radio" name="activity" id="act5" class="activity-radio">
+                <input type="radio" name="activity" id="act6" class="activity-radio">
+
+                <div class="activity-track">
+                    <div class="activity-slide slide-1">
+                        <label for="act6" class="nav-arrow prev">‹</label>
+                        <div class="icon">🎿</div>
+                        <h3>Esquí y snowboard</h3>
+                        <p>Disfruta de las pistas nevadas de Niseko, uno de los mejores destinos de esquí de Asia, con
+                            nieve polvo de calidad excepcional.</p>
+                        <label for="act2" class="nav-arrow next">›</label>
+                    </div>
+                    <div class="activity-slide slide-2">
+                        <label for="act1" class="nav-arrow prev">‹</label>
+                        <div class="icon">♨️</div>
+                        <h3>Aguas termales (Onsen)</h3>
+                        <p>Relájate en baños termales tradicionales japoneses rodeados de paisajes naturales, ideales
+                            para el descanso.</p>
+                        <label for="act3" class="nav-arrow next">›</label>
+                    </div>
+                    <div class="activity-slide slide-3">
+                        <label for="act2" class="nav-arrow prev">‹</label>
+                        <div class="icon">🦊</div>
+                        <h3>Observación de vida silvestre</h3>
+                        <p>Recorre el Parque Nacional de Shiretoko y observa zorros, ciervos y águilas marinas en su
+                            hábitat natural.</p>
+                        <label for="act4" class="nav-arrow next">›</label>
+                    </div>
+                    <div class="activity-slide slide-4">
+                        <label for="act3" class="nav-arrow prev">‹</label>
+                        <div class="icon">🍜</div>
+                        <h3>Gastronomía local</h3>
+                        <p>Prueba el ramen de Sapporo, mariscos frescos de Otaru y los famosos lácteos y postres de
+                            Hokkaido.</p>
+                        <label for="act5" class="nav-arrow next">›</label>
+                    </div>
+                    <div class="activity-slide slide-5">
+                        <label for="act4" class="nav-arrow prev">‹</label>
+                        <div class="icon">🚴</div>
+                        <h3>Ciclismo panorámico</h3>
+                        <p>Recorre en bicicleta los campos de lavanda y flores de Furano y Biei durante la temporada de
+                            verano.</p>
+                        <label for="act6" class="nav-arrow next">›</label>
+                    </div>
+                    <div class="activity-slide slide-6">
+                        <label for="act5" class="nav-arrow prev">‹</label>
+                        <div class="icon">🌃</div>
+                        <h3>Fotografía nocturna</h3>
+                        <p>Captura la vista panorámica de Hakodate desde el mirador del Monte Hakodate, una de las tres
+                            mejores vistas de Japón.</p>
+                        <label for="act1" class="nav-arrow next">›</label>
+                    </div>
+                </div>
+
+                <div class="activity-dots">
+                    <label for="act1"></label>
+                    <label for="act2"></label>
+                    <label for="act3"></label>
+                    <label for="act4"></label>
+                    <label for="act5"></label>
+                    <label for="act6"></label>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- ===================== TESTIMONIOS ===================== -->
+        <section id="testimonios">
+            <h2>Opiniones de nuestros visitantes</h2>
+            <div class="testimonial-grid" id="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">&#8220;</div>
+                    <p class="testimonial-text" data-testimonial-text>Cargando opinión...</p>
+                    <p class="testimonial-author" data-testimonial-author></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">&#8220;</div>
+                    <p class="testimonial-text" data-testimonial-text>Cargando opinión...</p>
+                    <p class="testimonial-author" data-testimonial-author></p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote-icon">&#8220;</div>
+                    <p class="testimonial-text" data-testimonial-text>Cargando opinión...</p>
+                    <p class="testimonial-author" data-testimonial-author></p>
+                </div>
+            </div>
+            
+            <!-- Escritorio: 1 punto por grupo (cambia cada clic) -->
+            <div class="testimonial-dots testimonial-dots-desktop" id="testimonial-dots-desktop"></div>
+
+            <!-- Móvil: 1 punto por tarjeta dentro del grupo activo (cambia cada clic) -->
+            <div class="testimonial-dots testimonial-dots-mobile" id="testimonial-dots-mobile"></div>
+
+            <button type="button" class="testimonial-btn" id="new-testimonial-btn">Ver más opiniones</button>
+        </section>
+    </main>
+
+    <!-- ===================== PIE DE PÁGINA ===================== -->
+    <footer id="contacto">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <h2>Hokkaido &#10052;&#65039;</h2>
+                <p>Descubre el norte de Japón: nieve, naturaleza, onsen y tradición
+                    en una excursión guiada de 5 días por la isla de Hokkaido.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Secciones</h3>
+                <ul>
+                    <li><a href="#descripcion">Descripción</a></li>
+                    <li><a href="#galeria">Galería</a></li>
+                    <li><a href="#itinerario">Itinerario</a></li>
+                    <li><a href="#actividades">Actividades</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contacto</h3>
+                <ul>
+                    <li><a href="mailto:info@gt.mofa.go.jp">info@gt.mofa.go.jp</a></li>
+                    <li><a href="tel:+50223827300">+502 2382-7300</a></li>
+                    <li>Guatemala City, Guatemala</li>
+                </ul>
+                <button type="button" class="footer-contact-btn" id="open-contact-btn">Quiero contactarme</button>
+            </div>
+        </div>
+
+        <div class="footer-social">
+            <a href="https://www.facebook.com/embjaponGT?ref=embed_page" aria-label="Facebook" target="_blank"
+                rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M13.5 21v-8.5H16l.5-3.5h-3V7c0-1 .3-1.7 1.7-1.7H16V2.1C15.7 2 14.8 2 13.7 2 11.4 2 9.8 3.4 9.8 6v2.9H7.3V12.5h2.5V21h3.7z" />
+                </svg>
+            </a>
+            <a href="https://www.instagram.com/embjapon_gt/" aria-label="Instagram" target="_blank"
+                rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24">
+                    <path
+                        d="M12 2.2c2.7 0 3 0 4 .1 1 0 1.6.2 2 .4.5.2.9.4 1.3.8.4.4.6.8.8 1.3.2.4.3 1 .4 2 .1 1 .1 1.3.1 4s0 3-.1 4c0 1-.2 1.6-.4 2-.2.5-.4.9-.8 1.3-.4.4-.8.6-1.3.8-.4.2-1 .3-2 .4-1 .1-1.3.1-4 .1s-3 0-4-.1c-1 0-1.6-.2-2-.4-.5-.2-.9-.4-1.3-.8-.4-.4-.6-.8-.8-1.3-.2-.4-.3-1-.4-2-.1-1-.1-1.3-.1-4s0-3 .1-4c0-1 .2-1.6.4-2 .2-.5.4-.9.8-1.3.4-.4.8-.6 1.3-.8.4-.2 1-.3 2-.4 1-.1 1.3-.1 4-.1M12 0C9.3 0 8.9 0 7.9.1c-1 .1-1.8.3-2.4.5-.7.3-1.3.6-1.8 1.2-.6.5-.9 1.1-1.2 1.8-.2.6-.4 1.4-.5 2.4C2 7 2 7.3 2 10s0 3 .1 4c.1 1 .3 1.8.5 2.4.3.7.6 1.3 1.2 1.8.5.6 1.1.9 1.8 1.2.6.2 1.4.4 2.4.5 1 .1 1.4.1 4 .1s3 0 4-.1c1-.1 1.8-.3 2.4-.5.7-.3 1.3-.6 1.8-1.2.6-.5.9-1.1 1.2-1.8.2-.6.4-1.4.5-2.4.1-1 .1-1.4.1-4s0-3-.1-4c-.1-1-.3-1.8-.5-2.4-.3-.7-.6-1.3-1.2-1.8-.5-.6-1.1-.9-1.8-1.2-.6-.2-1.4-.4-2.4-.5C15.1 0 14.7 0 12 0z" />
+                    <path d="M12 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zm0 10.2a4 4 0 110-8 4 4 0 010 8z" />
+                    <circle cx="18.4" cy="5.6" r="1.4" />
+                </svg>
+            </a>
+            <a href="https://x.com/embjapon_gt" aria-label="X" target="_blank" rel="noopener noreferrer">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path
+                        d="M18.901 1.153h3.68l-8.04 9.19L24 22.847h-7.406l-5.8-7.584-6.64 7.584H.473l8.6-9.83L0 1.153h7.594l5.243 6.932L18.901 1.153zm-1.29 19.493h2.04L6.486 3.24H4.298l13.313 17.406z" />
+                </svg>
+            </a>
+        </div>
+
+        <div class="footer-bottom">
+            <p>Página web desarrollada por: <strong>Luis Enrique Valey Osorio</strong></p>
+            <p>Curso: Desarrollo Web - Excursión a Hokkaido, Japón</p>
+            <p>&copy; 2026 - Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <a href="#top" class="back-to-top" aria-label="Volver arriba">&#8593;</a>
+
+    <!-- ===================== MODAL DE COTIZACIÓN ===================== -->
+    <div class="modal-overlay" id="quote-modal">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="quote-title">
+            <button type="button" class="modal-close" id="close-quote-btn" aria-label="Cerrar">&times;</button>
+            <h2 id="quote-title">Cotiza tu excursión</h2>
+            <p class="modal-subtitle">Completa el formulario y calcula el precio estimado al instante.</p>
+
+            <form class="quote-form" id="quote-form">
+                <label for="attendees">Número de asistentes</label>
+                <input type="number" id="attendees" name="attendees" min="1" max="50" value="1" required>
+
+                <label for="package">Paquete / tour</label>
+                <select id="package" name="package" required>
+                    <option value="24900">Básico — Q24,900 por persona</option>
+                    <option value="34900">Estándar — Q34,900 por persona</option>
+                    <option value="56900">Premium — Q56,900 por persona</option>
+                </select>
+
+                <fieldset>
+                    <legend>Servicios adicionales</legend>
+                    <label class="check-item">
+                        <input type="checkbox" name="services" value="600" data-per-person="true">
+                        Seguro de viaje (+Q600 por persona)
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" name="services" value="650" data-per-person="true">
+                        Renta de equipo de esquí completo (+Q650 por persona)
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" name="services" value="550" data-per-person="true">
+                        Lift Pass (+Q550 por persona)
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" name="services" value="400" data-per-person="false">
+                        Pocket Wi-Fi (+Q400 tarifa fija)
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" name="services" value="1250" data-per-person="false">
+                        Kimono + sesión fotográfica (+Q1,250 tarifa fija)
+                    </label>
+                    <label class="check-item">
+                        <input type="checkbox" name="services" value="1350" data-per-person="false">
+                        Tours JDM y Daikoku (+Q1,350 tarifa fija)
+                    </label>
+                </fieldset>
+
+                <button type="submit" class="quote-submit">Cotizar</button>
+            </form>
+
+            <div class="quote-result" id="quote-result">
+                <p>Precio total estimado:</p>
+                <div class="total-price" id="quote-total">Q0.00</div>
+                <p id="quote-breakdown"></p>
+                <p class="quote-disclaimer">Precios pueden variar según temporada, aerolínea y proveedor.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAL DE CONTACTO / RESERVACIÓN ===================== -->
+    <div class="modal-overlay" id="contact-modal">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="contact-title">
+            <button type="button" class="modal-close" id="close-contact-btn" aria-label="Cerrar">&times;</button>
+
+            <!-- Vista 1: formulario -->
+            <div id="contact-form-view">
+                <h2 id="contact-title">Contáctanos</h2>
+                <p class="modal-subtitle">Cuéntanos qué necesitas y te responderemos a la brevedad.</p>
+
+                <form class="quote-form" id="contact-form">
+                    <label for="contact-name">Nombre completo</label>
+                    <input type="text" id="contact-name" name="contact-name" required placeholder="Ej: Sakura Tanaka">
+
+                    <label for="contact-type">¿Qué deseas hacer?</label>
+                    <select id="contact-type" name="contact-type" required>
+                        <option value="" disabled selected>Selecciona una opción</option>
+                        <option value="reservar">Reservar la excursión</option>
+                        <option value="contactar">Solicitar que me contacten</option>
+                    </select>
+
+                    <div id="attendees-field" class="conditional-field">
+                        <label for="contact-attendees">Número de personas a reservar</label>
+                        <input type="number" id="contact-attendees" name="contact-attendees" min="1" max="10" value="1">
+                    </div>
+
+                    <label for="contact-email">Correo electrónico</label>
+                    <input type="email" id="contact-email" name="contact-email" required
+                        placeholder="Ej: ejemplo@correo.com">
+
+                    <label for="contact-phone">Número de teléfono</label>
+                    <input type="tel" id="contact-phone" name="contact-phone" required pattern="[0-9]{8}"
+                        placeholder="Ej: 23827300" minlength="8" maxlength="8">
+
+                    <label for="contact-message">¿Algo que no esté claro? (opcional)</label>
+                    <textarea id="contact-message" name="contact-message" rows="3"
+                        placeholder="Cuéntanos tu duda y con gusto te ayudaremos a resolverla :)"></textarea>
+
+                    <button type="submit" class="quote-submit">Enviar solicitud</button>
+                </form>
+            </div>
+
+            <!-- Vista 2: página de agradecimiento -->
+            <div id="contact-thank-you-view" class="thank-you-view">
+                <div class="thank-you-icon">&#10003;</div>
+                <h3 id="thank-you-title">¡Gracias!</h3>
+                <p id="thank-you-message"></p>
+                <button type="button" class="quote-submit" id="thank-you-close-btn">Cerrar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===================== MODAL LIGHTBOX DE GALERÍA ===================== -->
+    <div class="modal-overlay" id="image-lightbox">
+        <div class="modal-box lightbox-box" role="dialog" aria-modal="true" aria-labelledby="lightbox-title">
+            <button type="button" class="modal-close" id="close-lightbox-btn" aria-label="Cerrar">&times;</button>
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-info">
+                <p class="eyebrow-small">Explora</p>
+                <h3 id="lightbox-title"></h3>
+                <p id="lightbox-desc"></p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
