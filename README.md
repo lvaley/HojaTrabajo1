@@ -80,7 +80,7 @@ el apropiado para una aplicación React.
 
 ## Cómo visualizar la página
 
-1. Abrir el enlace desplegado en Netlify: `https://hokkaido-itinerary-v2.netlify.app/`.
+1. Abrir el enlace desplegado en Netlify: `https://hokkaido-itinerary-v3.netlify.app/`.
 
 ## Autor
 
