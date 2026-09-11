@@ -1,41 +1,100 @@
-# Excursión a Hokkaido - Página Web Informativa
+# Hokkaido — React + Vite
 
-## Descripción
+Migración a **React 19 + Vite + JavaScript + ESLint** del sitio original
+(HTML/CSS/JS puro) que promociona una excursión de 5 días a Hokkaido,
+Japón. Replica el **mismo comportamiento visual e interactivo** del sitio
+original, pero con cada funcionalidad modularizada como un **componente
+reutilizable** dentro de `src/components/`.
 
-Página web estática desarrollada en **HTML** (sin CSS ni JavaScript) cuyo
-objetivo es promocionar una excursión turística a **Hokkaido, Japón**.
+## Requisitos
 
-## Contenido de la página
+- Node.js 18 o superior
+- npm
 
-El archivo `index.html` incluye las siguientes secciones:
+## Instalación y uso
 
-- **Navbar**: título de la página y enlaces de navegación interna (`#id`)
-  hacia cada sección del contenido.
-- **Descripción del lugar** (`#descripcion`): reseña de Hokkaido, su
-  ubicación con enlace directo a Google Maps, características principales
-  y atractivos turísticos.
-- **Galería de imágenes** (`#galeria`): 6 fotografías representativas de
-  Hokkaido (Estanque Azul de Biei, Canal de Otaru, campos de lavanda de
-  Furano, Parque Odori en Sapporo, vista nocturna del Monte Hakodate y
-  Parque Nacional de Shiretoko).
-- **Tabla de itinerario** (`#itinerario`): itinerario detallado de la
-  excursión (5 días) con fechas, horarios, actividades y lugares a
-  visitar.
-- **Actividades adicionales** (`#actividades`): lista de actividades
-  complementarias que se pueden realizar durante la visita en Hokkaido.
+```bash
+npm install       # instala las dependencias
+npm run dev       # levanta el servidor de desarrollo (http://localhost:5173)
+npm run build     # genera el build de producción en /dist
+npm run preview   # sirve el build de producción localmente
+npm run lint      # corre ESLint sobre todo el proyecto
+```
 
-## Tecnologías utilizadas
+## Estructura del proyecto
 
-- HTML5 (etiquetas semánticas: `header`, `nav`, `main`, `section`,
-  `footer`, `table`, `fieldset`, etc.)
-- Sin CSS ni JavaScript, según los requerimientos de la hoja de trabajo.
-- Imágenes obtenidas de Pexels (contenido para uso publico).
+```
+├── index.html                  # HTML raíz (título, meta tags, favicon, fuentes)
+├── public/
+│   └── img/                    # imágenes estáticas (se sirven desde /img/...)
+├── src/
+│   ├── main.jsx                # punto de entrada de React
+│   ├── App.jsx                 # arma la página uniendo todos los componentes
+│   ├── index.css               # estilos globales (migrados de styles.css)
+│   ├── data/                   # arreglos de datos que alimentan cada componente
+│   │   ├── galleryImages.js
+│   │   ├── activities.js
+│   │   ├── itinerary.js
+│   │   ├── quoteOptions.js
+│   │   └── testimonials.js
+│   ├── hooks/
+│   │   └── useMediaQuery.js    # hook reutilizable para media queries (usado por Testimonials)
+│   └── components/
+│       ├── Navbar/              # navbar sticky, menú hamburguesa, ícono de búsqueda
+│       ├── Hero/                 # banner principal + botón "Cotizar excursión"
+│       ├── Description/          # descripción del destino
+│       ├── Gallery/              # (1) Galería de Imágenes Interactiva
+│       │   ├── Gallery.jsx           (contenedor: junta desktop + mobile + lightbox)
+│       │   ├── GalleryDesktop.jsx    (carrusel paginado, 3 imágenes por página)
+│       │   ├── GalleryMobile.jsx     (carrusel de 1 imagen a la vez)
+│       │   └── Lightbox.jsx          (modal con la imagen en grande)
+│       ├── Itinerary/            # tabla de itinerario (boletos de viaje)
+│       ├── Activities/           # (3) Filtro de Actividades en Tiempo Real
+│       │   ├── Activities.jsx        (carrusel de actividades)
+│       │   └── ActivitySearchBar.jsx (barra de búsqueda fija bajo el header)
+│       ├── Testimonials/         # (5) Reseñas / Testimonios Aleatorios
+│       ├── QuoteCalculator/      # (2) Calculadora de Cotización / Presupuesto
+│       ├── ContactModal/         # modal de contacto / reservación
+│       ├── Footer/               # pie de página
+│       ├── BackToTop/            # botón flotante "volver arriba"
+│       └── Modal/                # modal genérico reutilizable (usado por los 3 anteriores)
+```
 
-## Cómo visualizar la página
+## Componentes interactivos obligatorios
 
-1. Abrir el enlace desplegado en Netlify: `https://hokkaido-itinerary.netlify.app/`.
+1. **Galería de Imágenes Interactiva** (`components/Gallery/`) — carrusel
+   paginado en escritorio (2 páginas de 3 imágenes) y carrusel de 1 imagen
+   a la vez en móvil (mismo breakpoint de 600px que el sitio original).
+   Al hacer clic en cualquier imagen se abre un lightbox con la foto en
+   grande y su descripción completa.
+
+2. **Calculadora de Cotización / Presupuesto** (`components/QuoteCalculator/`)
+   — modal con número de asistentes, paquete/tour y servicios
+   adicionales. Calcula e imprime el total estimado al instante
+   (`event.preventDefault()`, sin recargar la página).
+
+3. **Filtro de Actividades en Tiempo Real** (`components/Activities/`) —
+   la barra de búsqueda (activada desde el ícono de lupa del navbar) filtra
+   mientras se escribe y salta automáticamente a la tarjeta del carrusel
+   que coincide con la búsqueda.
+
+4. **Sección de Reseñas / Testimonios Aleatorios** (`components/Testimonials/`)
+   — combina 2 arreglos (nombres y comentarios) al azar y los agrupa en
+   bloques de 3. En escritorio, cada clic cambia de grupo; en móvil, cada
+   clic avanza una tarjeta a la vez (mismo comportamiento que el original,
+   detectado con el hook `useMediaQuery`).
+
+## Diferencias de implementación respecto al original
+
+El sitio original usaba **CSS puro** (`input[type=checkbox/radio]` oculto
++ `:checked` + selector `~`) para los carruseles y el menú, ya que no
+usaba JavaScript en esa etapa. En esta migración a React, esa misma
+interactividad se logra de forma **idiomática con `useState`** y clases
+condicionales (`.active`, `.open`), en vez de mantener el truco de CSS —
+el resultado visual y de comportamiento es idéntico, pero el código es
+el apropiado para una aplicación React.
 
 ## Autor
 
-- **Estudiante:** Luis Enrique Valey Osorio (9490-21-16222)
-- **Proyecto:** Hoja de Trabajo 1 - Página Web con HTML
+- **Estudiante:** Luis Enrique Valey Osorio
+- **Proyecto:** Migración a React — Excursión a Hokkaido, Japón
