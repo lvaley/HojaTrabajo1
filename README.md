@@ -1,25 +1,9 @@
-# Hokkaido — React + Vite
+# Excursión a Hokkaido - Página Web Informativa
 
-Migración a **React 19 + Vite + JavaScript + ESLint** del sitio original
-(HTML/CSS/JS puro) que promociona una excursión de 5 días a Hokkaido,
-Japón. Replica el **mismo comportamiento visual e interactivo** del sitio
-original, pero con cada funcionalidad modularizada como un **componente
-reutilizable** dentro de `src/components/`.
-
-## Requisitos
-
-- Node.js 18 o superior
-- npm
-
-## Instalación y uso
-
-```bash
-npm install       # instala las dependencias
-npm run dev       # levanta el servidor de desarrollo (http://localhost:5173)
-npm run build     # genera el build de producción en /dist
-npm run preview   # sirve el build de producción localmente
-npm run lint      # corre ESLint sobre todo el proyecto
-```
+Migración del sitio original de (HTML/CSS/JS puro) a **React** que promociona 
+una excursión de 5 días a Hokkaido, Japón. Replica el **mismo comportamiento 
+visual e interactivo** del sitio original, pero con cada funcionalidad 
+modularizada como un **componente reutilizable** dentro de `src/components/`.
 
 ## Estructura del proyecto
 
@@ -94,7 +78,12 @@ condicionales (`.active`, `.open`), en vez de mantener el truco de CSS —
 el resultado visual y de comportamiento es idéntico, pero el código es
 el apropiado para una aplicación React.
 
+## Cómo visualizar la página
+
+1. Abrir el enlace desplegado en Netlify: `https://hokkaido-itinerary-v2.netlify.app/`.
+
 ## Autor
 
-- **Estudiante:** Luis Enrique Valey Osorio
-- **Proyecto:** Migración a React — Excursión a Hokkaido, Japón
+- **Estudiante:** Luis Enrique Valey Osorio (9490-21-16222)
+- **Proyecto:** Hoja de Trabajo 1 - Página Web con HTML
+
